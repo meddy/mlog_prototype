@@ -46,102 +46,125 @@
 
 <main class="container theme-showcase">
   <div class="row">
-    <table class="table table-hover" id="workouts-table">
-      <tr>
-        <th>
-          <label>
-            <input type="checkbox" id="workouts-bulk-select">
-          </label>
-        </th>
-        <th>Date</th>
-        <th>Workout Template</th>
-      </tr>
-      <tr>
-        <td>
-          <label>
-            <input type="checkbox">
-          </label>
-        </td>
-        <td>2016-01-10</td>
-        <td>
-          <a href="workout.html">Push</a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label>
-            <input type="checkbox">
-          </label>
-        </td>
-        <td>2016-01-09</td>
-        <td>
-          <a href="workout.html">Pull</a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label>
-            <input type="checkbox">
-          </label>
-        </td>
-        <td>2016-01-08</td>
-        <td>
-          <a href="workout.html">Legs</a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label>
-            <input type="checkbox">
-          </label>
-        </td>
-        <td>2016-01-05</td>
-        <td>
-          <a href="workout.html">Push</a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label>
-            <input type="checkbox">
-          </label>
-        </td>
-        <td>2016-01-04</td>
-        <td>
-          <a href="workout.html">Pull</a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label>
-            <input type="checkbox">
-          </label>
-        </td>
-        <td>2016-01-03</td>
-        <td>
-          <a href="workout.html">Legs</a>
-        </td>
-      </tr>
-    </table>
+    <div class="col-lg-12">
+      <div class="btn-group">
+        <button type="button" class="btn btn-success" title="New Workout">
+          <span class="glyphicon glyphicon-plus"></span>
+        </button>
+        <button type="button" class="btn btn-danger disabled" title="Delete Workout" id="workouts-delete-action">
+          <span class="glyphicon glyphicon-trash"></span>
+        </button>
+      </div>
+    </div>
   </div>
   <div class="row">
-    <button type="button" class="btn btn-danger" title="Delete Workout" id="workouts-delete-action">
-      <span class="glyphicon glyphicon-trash"></span>
-    </button>
-    <button type="button" class="btn btn-success" title="New Workout">
-      <span class="glyphicon glyphicon-plus"></span>
-    </button>
+    <div class="col-lg-12">
+      <table class="table table-hover" id="workouts-table">
+        <tr>
+          <th>
+            <label>
+              <input type="checkbox" id="workouts-bulk-select">
+            </label>
+          </th>
+          <th>Date</th>
+          <th>Workout Template</th>
+        </tr>
+        <tr>
+          <td>
+            <label>
+              <input type="checkbox">
+            </label>
+          </td>
+          <td>2016-01-10</td>
+          <td>
+            <a href="workout.html">Push</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>
+              <input type="checkbox">
+            </label>
+          </td>
+          <td>2016-01-09</td>
+          <td>
+            <a href="workout.html">Pull</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>
+              <input type="checkbox">
+            </label>
+          </td>
+          <td>2016-01-08</td>
+          <td>
+            <a href="workout.html">Legs</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>
+              <input type="checkbox">
+            </label>
+          </td>
+          <td>2016-01-05</td>
+          <td>
+            <a href="workout.html">Push</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>
+              <input type="checkbox">
+            </label>
+          </td>
+          <td>2016-01-04</td>
+          <td>
+            <a href="workout.html">Pull</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>
+              <input type="checkbox">
+            </label>
+          </td>
+          <td>2016-01-03</td>
+          <td>
+            <a href="workout.html">Legs</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <nav class="center-block">
+        <ul class="pager">
+          <li class="disabled">
+            <a href="#">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+          </li>
+          <li><strong>1 - 20</strong> of <strong>56</strong></li>
+          <li>
+            <a href="#">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </main>
 
 <script src="js/jquery-3.1.0.js"></script>
 <script src="js/bootstrap.js"></script>
 <script type="text/javascript">
-  $(function() {
+  $(function () {
     var $checkboxes = $('#workouts-table').find('input[type="checkbox"]');
     var $deleteButton = $('#workouts-delete-action');
-
-    $deleteButton.hide();
 
     $('#workouts-bulk-select').on('change', function (event) {
       event.preventDefault();
@@ -155,14 +178,14 @@
     $checkboxes.on('change', function (event) {
       event.preventDefault();
 
-      var showDelete = false;
+      var deleteDisabled = true;
       $checkboxes.each(function () {
         if ($(this).prop('checked')) {
-          showDelete = true;
+          deleteDisabled = false;
         }
       });
 
-      $deleteButton.toggle(showDelete);
+      $deleteButton.toggleClass('disabled', deleteDisabled);
     });
   });
 </script>
