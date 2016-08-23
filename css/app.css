@@ -6,3 +6,7 @@ body {
 .btn-group {
   margin: 20px 0;
 }
+
+.panel-heading .panel-title {
+  display: inline-block;
+}
