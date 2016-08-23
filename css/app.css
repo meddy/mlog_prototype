@@ -10,3 +10,15 @@ body {
 .panel-heading .panel-title {
   display: inline-block;
 }
+
+label input[type="checkbox"] {
+  margin: 0;
+}
+
+.exercise-item .btn-group {
+  margin: 10px 0;
+}
+
+.exercise-item input {
+  margin: 10px 0;
+}
