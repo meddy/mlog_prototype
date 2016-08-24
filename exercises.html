@@ -102,20 +102,22 @@
             </div>
           </div>
           <ul class="list-group">
-            <li class="list-group-item exercise-item">
+            <li class="list-group-item">
               <div class="row">
-                <div class="col-sm-9 col-xs-8">
-                  <input type="text" class="form-control" value="Band Face Pull" id="foo" title="Exercise Name">
+                <div class="col-lg-1 col-xs-2">
+                  <input type="checkbox" title="Select Exercise">
                 </div>
-                <div class="col-lg-3 col-xs-4">
-                  <div class="btn-group pull-right">
-                    <label class="btn btn-default">
-                      <input type="checkbox">
-                    </label>
-                    <button type="button" class="btn btn-default">
-                      <span class="glyphicon glyphicon-edit"></span>
-                    </button>
-                  </div>
+                <div class="col-lg-9 col-xs-7">
+                  <input type="text"
+                         class="form-control"
+                         value="Band Face Pull"
+                         title="Exercise Name"
+                         disabled>
+                </div>
+                <div class="col-lg-2 col-xs-3">
+                  <button type="button" class="btn btn-default" id="exercises-edit-exercise">
+                    <span class="glyphicon glyphicon-edit"></span>
+                  </button>
                 </div>
               </div>
             </li>
@@ -129,6 +131,29 @@
 <script src="js/jquery-3.1.0.js"></script>
 <script src="js/bootstrap.js"></script>
 <script type="text/javascript">
+  $(function() {
+    var edit = false;
+
+    $('#exercises-edit-exercise').on('click', function () {
+      var $this = $(this);
+
+      edit = !edit;
+
+      $this
+        .toggleClass('btn-default', !edit)
+        .toggleClass('btn-success', edit);
+
+      $this
+        .find('span')
+        .toggleClass('glyphicon-edit', !edit)
+        .toggleClass('glyphicon-ok', edit);
+
+      $this
+        .parents('.row')
+        .find('input[type="text"]')
+        .prop('disabled', !edit);
+    });
+  });
 </script>
 </body>
 </html>
