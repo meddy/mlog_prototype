@@ -61,44 +61,52 @@
 <main class="container theme-showcase">
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title">Push</h3>
-        </div>
-        <div class="panel-body">
-          <ul class="list-group">
-            <li class="list-group-item">
-              <h5>Bench Press</h5>
-              <input type="number" class="form-control" style="width: 65px"> - <input type="number" class="form-control" style="width: 65px"> X <input type="number" class="form-control" style="width: 65px"> - <input type="number" class="form-control" style="width: 65px"> <input type="number" class="form-control" style="width: 75px">' - <input type="number" class="form-control" style="width: 75px">'
-            </li>
-            <li class="list-group-item">
-              <form class="form-inline">
-                <div class="row">
-                  <div class="col-xs-12">
-                    <h5>Sets</h5>
-                    <input type="number" class="form-control" placeholder="Min" title="Min Set">
-                    <input type="number" class="form-control" placeholder="Max" title="Max Set">
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-xs-12">
-                    <h5>Reps</h5>
-                    <input type="number" class="form-control" placeholder="Min" title="Min Reps">
-                    <input type="number" class="form-control" placeholder="Max" title="Max Reps">
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-xs-12">
-                    <h5>Rest</h5>
-                    <input type="number" class="form-control" placeholder="Min" title="Min Rest">
-                    <input type="number" class="form-control" placeholder="Max" title="Max Rest">
-                  </div>
-                </div>
-              </form>
-            </li>
-          </ul>
-        </div>
+      <div class="clearfix">
+        <ol class="breadcrumb pull-left">
+          <li>
+            <a href="workout-template.html">Push</a>
+          </li>
+          <li>Edit</li>
+        </ol>
+        <button type="button" class="btn btn-primary pull-right" title="New Exercise Template">
+          <span class="glyphicon glyphicon-plus"></span>
+        </button>
       </div>
+      <ul class="list-group">
+        <li class="list-group-item text-center">
+          <div class="clearfix">
+            <h4 class="text-left pull-left">Bench Press</h4>
+            <div class="btn-group pull-right">
+              <button type="button" class="btn btn-default">
+                <span class="glyphicon glyphicon-edit"></span>
+              </button>
+              <button type="button" class="btn btn-danger" title="Delete Workout">
+                <span class="glyphicon glyphicon-trash"></span>
+              </button>
+            </div>
+          </div>
+          <h5>Reps</h5>
+          <div class="form-inline">
+            <input type="number" class="form-control" placeholder="Min" value="6" disabled>
+            <span class="glyphicon glyphicon-minus"></span>
+            <input type="number" class="form-control" placeholder="Max" value="8" disabled>
+          </div>
+
+          <h5>Sets</h5>
+          <div class="form-inline">
+            <input type="number" class="form-control" placeholder="Min" value="3" disabled>
+            <span class="glyphicon glyphicon-minus"></span>
+            <input type="number" class="form-control" placeholder="Max" value="5" disabled>
+          </div>
+
+          <h5>Rest</h5>
+          <div class="form-inline">
+            <input type="number" class="form-control" placeholder="Min" value="90" disabled>
+            <span class="glyphicon glyphicon-minus"></span>
+            <input type="number" class="form-control" placeholder="Max" value="180" disabled>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </main>
@@ -106,6 +114,7 @@
 <script src="js/jquery-3.1.0.js"></script>
 <script src="js/bootstrap.js"></script>
 <script type="text/javascript">
+
 </script>
 </body>
 </html>
