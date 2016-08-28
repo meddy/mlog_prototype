@@ -60,70 +60,60 @@
 
 <main class="container theme-showcase">
   <div class="row">
-    <div class="col-md-6">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title">System Defined</h3>
+    <div class="col-lg-6 col-lg-offset-3">
+      <h4>User Defined</h4>
+      <div class="btn-toolbar">
+        <div class="btn-group">
+          <label class="btn btn-default">
+            <input type="checkbox">
+          </label>
         </div>
-        <div class="panel-body">
-          <ul class="list-group">
-            <li class="list-group-item">
-              Barbell Bench Press
-            </li>
-            <li class="list-group-item">
-              Barbell Shoulder Press
-            </li>
-            <li class="list-group-item">
-              Dumbbell Tricep Extension
-            </li>
-          </ul>
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary" title="New Workout">
+            <span class="glyphicon glyphicon-plus"></span>
+          </button>
+          <button type="button" class="btn btn-danger disabled" title="Delete Workout" id="workouts-delete-action">
+            <span class="glyphicon glyphicon-trash"></span>
+          </button>
         </div>
       </div>
-    </div>
-    <div class="col-md-6">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title">User Defined</h3>
-        </div>
-        <div class="panel-body">
-          <div class="btn-toolbar">
-            <div class="btn-group">
-              <label class="btn btn-default">
-                <input type="checkbox">
-              </label>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col-lg-1 col-xs-2">
+              <input type="checkbox" title="Select Exercise">
             </div>
-            <div class="btn-group">
-              <button type="button" class="btn btn-primary" title="New Workout">
-                <span class="glyphicon glyphicon-plus"></span>
-              </button>
-              <button type="button" class="btn btn-danger disabled" title="Delete Workout" id="workouts-delete-action">
-                <span class="glyphicon glyphicon-trash"></span>
+            <div class="col-lg-9 col-xs-7">
+              <input type="text"
+                     class="form-control"
+                     value="Band Face Pull"
+                     title="Exercise Name"
+                     disabled>
+            </div>
+            <div class="col-lg-2 col-xs-3">
+              <button type="button" class="btn btn-default" id="exercises-edit-exercise">
+                <span class="glyphicon glyphicon-edit"></span>
               </button>
             </div>
           </div>
-          <ul class="list-group">
-            <li class="list-group-item">
-              <div class="row">
-                <div class="col-lg-1 col-xs-2">
-                  <input type="checkbox" title="Select Exercise">
-                </div>
-                <div class="col-lg-9 col-xs-7">
-                  <input type="text"
-                         class="form-control"
-                         value="Band Face Pull"
-                         title="Exercise Name"
-                         disabled>
-                </div>
-                <div class="col-lg-2 col-xs-3">
-                  <button type="button" class="btn btn-default" id="exercises-edit-exercise">
-                    <span class="glyphicon glyphicon-edit"></span>
-                  </button>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
+        </li>
+      </ul>
+    </div>
+    </div>
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+      <h4>System Defined</h4>
+      <ul class="list-group">
+        <li class="list-group-item">
+          Barbell Bench Press
+        </li>
+        <li class="list-group-item">
+          Barbell Shoulder Press
+        </li>
+        <li class="list-group-item">
+          Dumbbell Tricep Extension
+        </li>
+      </ul>
     </div>
   </div>
 </main>
@@ -131,7 +121,7 @@
 <script src="js/jquery-3.1.0.js"></script>
 <script src="js/bootstrap.js"></script>
 <script type="text/javascript">
-  $(function() {
+  $(function () {
     var edit = false;
 
     $('#exercises-edit-exercise').on('click', function () {

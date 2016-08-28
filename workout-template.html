@@ -61,66 +61,61 @@
 <main class="container theme-showcase">
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title">Push</h3>
+      <ol class="breadcrumb">
+        <li>Push</li>
+      </ol>
+      <div class="btn-toolbar">
+        <div class="btn-group">
+          <label class="btn btn-default">
+            <input type="checkbox">
+          </label>
         </div>
-        <div class="panel-body">
-          <div class="btn-toolbar">
-            <div class="btn-group">
-              <label class="btn btn-default">
-                <input type="checkbox">
-              </label>
-            </div>
-            <div class="btn-group">
-              <button type="button" class="btn btn-default" title="New Workout">
-                <span class="glyphicon glyphicon-plus"></span>
-              </button>
-              <button type="button" class="btn btn-primary">
-                <span class="glyphicon glyphicon-edit"></span>
-              </button>
-              <button type="button" class="btn btn-danger disabled" title="Delete Workout">
-                <span class="glyphicon glyphicon-trash"></span>
-              </button>
-            </div>
-          </div>
-          <ul class="list-group">
-            <li class="list-group-item">
-              <input type="checkbox" title="Select Exercise">
-              <a href="workout.html" class="date">2016-01-09 10:13</a>
-            </li>
-            <li class="list-group-item">
-              <input type="checkbox" title="Select Exercise">
-              <a href="workout.html" class="date">2016-01-10 09:43</a>
-            </li>
-            <li class="list-group-item">
-              <input type="checkbox" title="Select Exercise">
-              <a href="workout.html" class="date">2016-01-11 08:00</a>
-            </li>
-          </ul>
+        <div class="btn-group">
+          <button type="button" class="btn btn-default" title="New Workout">
+            <span class="glyphicon glyphicon-plus"></span>
+          </button>
+          <a href="workout-template-edit.html" type="button" class="btn btn-primary">
+            <span class="glyphicon glyphicon-edit"></span>
+          </a>
+          <button type="button" class="btn btn-danger disabled" title="Delete Workout">
+            <span class="glyphicon glyphicon-trash"></span>
+          </button>
         </div>
       </div>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <input type="checkbox" title="Select Exercise">
+          <a href="workout.html" class="date">2016-01-09 10:13</a>
+        </li>
+        <li class="list-group-item">
+          <input type="checkbox" title="Select Exercise">
+          <a href="workout.html" class="date">2016-01-10 09:43</a>
+        </li>
+        <li class="list-group-item">
+          <input type="checkbox" title="Select Exercise">
+          <a href="workout.html" class="date">2016-01-11 08:00</a>
+        </li>
+      </ul>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-12">
-      <nav class="center-block">
-        <ul class="pager">
-          <li class="disabled">
-            <a href="#">
-              <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
-          </li>
-          <li><strong>1 - 20</strong> of <strong>56</strong></li>
-          <li>
-            <a href="#">
-              <span class="glyphicon glyphicon-chevron-right"></span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+    <div class="row">
+      <div class="col-lg-12">
+        <nav class="center-block">
+          <ul class="pager">
+            <li class="disabled">
+              <a href="#">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+              </a>
+            </li>
+            <li><strong>1 - 20</strong> of <strong>56</strong></li>
+            <li>
+              <a href="#">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
-  </div>
 </main>
 
 <script src="js/jquery-3.1.0.js"></script>
