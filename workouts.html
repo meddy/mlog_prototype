@@ -61,20 +61,29 @@
 <main class="container theme-showcase">
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
-      <div class="btn-toolbar">
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary" title="New Workout">
-            <span class="glyphicon glyphicon-plus"></span>
-          </button>
-          <button type="button" class="btn btn-danger disabled" title="Delete Workout" id="workouts-delete-action">
-            <span class="glyphicon glyphicon-trash"></span>
-          </button>
+      <div class="row">
+        <div class="btn-toolbar col-md-6">
+          <div class="btn-group">
+            <button type="button" class="btn btn-danger disabled" title="Delete Workout" id="workouts-delete-action">
+              <span class="glyphicon glyphicon-trash"></span>
+            </button>
+            <a href="workout-template-new.html" class="btn btn-default" title="New Workout Template">
+              <span class="glyphicon glyphicon-plus"></span>
+              Template
+            </a>
+          </div>
         </div>
-        <div class="btn-group">
-          <a href="workout-template-new.html" class="btn btn-default" title="New Workout Template">
-            <span class="glyphicon glyphicon-plus"></span>
-            Template
-          </a>
+        <div class="col-md-6 text-right">
+          <div class="btn-select-grp">
+            <select class="form-control select-action" title="Workout Template">
+              <option>Push</option>
+              <option>Pull</option>
+              <option>Legs</option>
+            </select>
+            <button type="button" class="btn btn-primary" title="New Workout">
+              <span class="glyphicon glyphicon-plus"></span>
+            </button>
+          </div>
         </div>
       </div>
     </div>

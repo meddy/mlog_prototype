@@ -7,10 +7,15 @@ label input[type="checkbox"] {
   margin: 0;
 }
 
-.btn-group {
-  margin: 20px 0;
+.date {
+  font-family: monospace;
 }
 
-.date {
-  font-family: monospace
+.btn-group, .btn-select-grp {
+  margin-bottom: 20px;
+}
+
+.select-action {
+  width: calc(100% - 45px);
+  display: inline-block;
 }
