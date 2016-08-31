@@ -72,10 +72,76 @@
           <span class="glyphicon glyphicon-plus"></span>
         </button>
       </div>
-      <ul class="list-group">
+      <ul class="list-group" id="exercise-template-list">
         <li class="list-group-item text-center">
           <div class="clearfix">
             <h4 class="text-left pull-left">Bench Press</h4>
+            <div class="btn-group pull-right">
+              <button type="button" class="btn btn-default">
+                <span class="glyphicon glyphicon-edit"></span>
+              </button>
+              <button type="button" class="btn btn-danger" title="Delete Workout">
+                <span class="glyphicon glyphicon-trash"></span>
+              </button>
+            </div>
+          </div>
+          <h5>Reps</h5>
+          <div class="form-inline">
+            <input type="number" class="form-control" placeholder="Min" value="6" disabled>
+            <span class="glyphicon glyphicon-minus"></span>
+            <input type="number" class="form-control" placeholder="Max" value="8" disabled>
+          </div>
+
+          <h5>Sets</h5>
+          <div class="form-inline">
+            <input type="number" class="form-control" placeholder="Min" value="3" disabled>
+            <span class="glyphicon glyphicon-minus"></span>
+            <input type="number" class="form-control" placeholder="Max" value="5" disabled>
+          </div>
+
+          <h5>Rest</h5>
+          <div class="form-inline">
+            <input type="number" class="form-control" placeholder="Min" value="90" disabled>
+            <span class="glyphicon glyphicon-minus"></span>
+            <input type="number" class="form-control" placeholder="Max" value="180" disabled>
+          </div>
+        </li>
+        <li class="list-group-item text-center">
+          <div class="clearfix">
+            <h4 class="text-left pull-left">Overhead Press</h4>
+            <div class="btn-group pull-right">
+              <button type="button" class="btn btn-default">
+                <span class="glyphicon glyphicon-edit"></span>
+              </button>
+              <button type="button" class="btn btn-danger" title="Delete Workout">
+                <span class="glyphicon glyphicon-trash"></span>
+              </button>
+            </div>
+          </div>
+          <h5>Reps</h5>
+          <div class="form-inline">
+            <input type="number" class="form-control" placeholder="Min" value="6" disabled>
+            <span class="glyphicon glyphicon-minus"></span>
+            <input type="number" class="form-control" placeholder="Max" value="8" disabled>
+          </div>
+
+          <h5>Sets</h5>
+          <div class="form-inline">
+            <input type="number" class="form-control" placeholder="Min" value="3" disabled>
+            <span class="glyphicon glyphicon-minus"></span>
+            <input type="number" class="form-control" placeholder="Max" value="5" disabled>
+          </div>
+
+          <h5>Rest</h5>
+          <div class="form-inline">
+            <input type="number" class="form-control" placeholder="Min" value="90" disabled>
+            <span class="glyphicon glyphicon-minus"></span>
+            <input type="number" class="form-control" placeholder="Max" value="180" disabled>
+          </div>
+        </li>
+        <li class="list-group-item text-center">
+          <div class="clearfix">
+            <h4 class="text-left pull-left">Dips</h4>
             <div class="btn-group pull-right">
               <button type="button" class="btn btn-default">
                 <span class="glyphicon glyphicon-edit"></span>
@@ -113,8 +179,9 @@
 
 <script src="js/jquery-3.1.0.js"></script>
 <script src="js/bootstrap.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Sortable/1.4.2/Sortable.min.js"></script>
 <script type="text/javascript">
-
+  Sortable.create(document.getElementById('exercise-template-list'));
 </script>
 </body>
 </html>
